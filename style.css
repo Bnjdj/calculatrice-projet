@@ -1,31 +1,106 @@
+/* Reset basique et structure du corps */
 body {
-    font-family: Arial, sans-serif;
+    /* Utilisation d'une police avec empattement (serif) pour un aspect classique/antique */
+    font-family: Georgia, 'Times New Roman', Times, serif;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #f4f4f9;
+    /* Fond bleu nuit profond (Mer Égée nocturne) */
+    background-color: #0a1f3a;
     margin: 0;
+    /* Couleur de texte crème pour le contraste */
+    color: #e0d8c8;
 }
+
 .calculator {
-    background: white;
-    padding: 2rem;
+    /* Fond du conteneur sombre (type pierre foncée) */
+    background: #1c2a38;
+    padding: 2.5rem;
     border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    /* Bordure dorée épaisse pour le côté précieux */
+    border: 3px solid #d4af37;
+    /* Ombre portée plus marquée pour la profondeur */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.6);
     text-align: center;
 }
+
+h1 {
+    /* Titre couleur Or */
+    color: #d4af37;
+    text-transform: uppercase;
+    letter-spacing: 3px; /* Espacement des lettres style gravure */
+    margin-bottom: 30px;
+    /* Petit soulignement or */
+    border-bottom: 2px solid #d4af37;
+    display: inline-block;
+    padding-bottom: 10px;
+}
+
 .inputs {
     display: flex;
     gap: 10px;
-    margin-bottom: 15px;
+    margin-bottom: 25px;
+    justify-content: center;
 }
+
 input, select, button {
-    padding: 10px;
-    font-size: 1rem;
+    padding: 12px;
+    font-size: 1.1rem;
+    border-radius: 4px;
+    font-family: inherit; /* On garde la police serif */
+    outline: none;
 }
-#result {
-    margin-top: 20px;
+
+input {
+    /* Fond des inputs sombre bleuté */
+    background-color: #2c3e50;
+    /* Bordure dorée fine */
+    border: 2px solid #947c2a;
+    color: #e0d8c8;
+    text-align: center;
+    width: 100px;
+}
+
+input::placeholder {
+    color: #7f8c8d;
+}
+
+/* Style spécifique pour le sélecteur d'opération */
+select#operator {
+    background-color: #d4af37; /* Fond Or */
+    color: #0a1f3a; /* Texte sombre */
+    border: 2px solid #d4af37;
     font-weight: bold;
-    font-size: 1.2rem;
-    color: #333;
+    cursor: pointer;
+}
+
+button#calc-btn {
+    width: 100%;
+    /* Bouton Or */
+    background-color: #d4af37;
+    /* Texte sombre pour contraste maximal */
+    color: #0a1f3a;
+    border: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button#calc-btn:hover {
+    /* Effet au survol : devient plus lumineux, comme de l'or poli */
+    background-color: #f1c40f;
+    box-shadow: 0 0 15px rgba(212, 175, 55, 0.4);
+}
+
+#result {
+    margin-top: 30px;
+    font-weight: bold;
+    font-size: 1.4rem;
+    /* Résultat en Or pour le mettre en valeur */
+    color: #d4af37;
+    padding-top: 20px;
+    border-top: 1px solid rgba(212, 175, 55, 0.3);
 }
