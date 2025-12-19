@@ -18,6 +18,9 @@ document.getElementById('calc-btn').addEventListener('click', function() {
         case '-':
             result = num1 - num2;
             break;
+        case '*':
+            result = num1 * num2;
+            break;
         default:
             result = "Opération non supportée";
     }

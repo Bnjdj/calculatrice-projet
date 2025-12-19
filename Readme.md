@@ -6,3 +6,4 @@ Une calculatrice simple pour gérer les opérations de base.
 * Interface utilisateur basique
 * Addition
 * Soustraction
+* Multiplication
